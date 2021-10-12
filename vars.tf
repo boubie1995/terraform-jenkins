@@ -38,7 +38,7 @@ variable "ec2_instance_type" {
 variable "s3_bucket" {
     type = string
     description = "name of s3 bucket"
-    default = "Terraform_Backup"
+    default = "terraform_backup"
 }
 
 variable "s3_key_name" {

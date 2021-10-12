@@ -12,6 +12,6 @@ ec2_instance_type = "t2.micro"
 
 # S3 VARS 
 
-s3_bucket = "Terraform_Backup"
+s3_bucket = "terraform_backup"
 s3_key_name = "backup"
 s3_source = "../../terraform.tfstate.backup"

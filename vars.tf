@@ -35,9 +35,3 @@ variable "ec2_instance_type" {
         default = "t2.micro"
 }
 
-variable "subnet_id_public" {
-	type = string
-        description = "ec2 instance value"
-        default = "10.0.0.0/24"
-}
-

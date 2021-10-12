@@ -18,6 +18,6 @@ module "my_ec2" {
 	source = "./module/ec2"
 	ec2_ami = var.ec2_ami
 	ec2_instance_type = var.ec2_instance_type
-	subnet_id_public = var.subnet_id_public
+	subnet_id_public = module.my_vpc.subnet_id_public
 }
 

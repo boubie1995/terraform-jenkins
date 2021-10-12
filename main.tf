@@ -1,7 +1,7 @@
  provider "aws" {
-  region = "us-east-1"
-  shared_credentials_file = "/Users/tf_user/.aws/creds"
-  profile                 = "admin"
+   region = "us-east-1"
+   shared_credentials_file = "/Users/boubie/.aws/credentials"
+   profile                 = "admin"
 }
 
 module "my_vpc" {
@@ -21,3 +21,9 @@ module "my_ec2" {
 	subnet_id_public = module.my_vpc.subnet_id_public
 }
 
+module "my_s3" {
+	source = "./module/s3"
+	s3_bucket = var.s3_bucket
+  	s3_key_name = var.s3_key_name
+  	s3_source = var.s3_source
+}

@@ -6,20 +6,20 @@ variable "vpc_cidr" {
 
 variable "tenancy" {
 	type = string
-        description = "value of tenancy"
-        default = "default"
+    description = "value of tenancy"
+    default = "default"
 }
 
 variable "subnet_cidr_public" {
 	type = string
-        description = "value of subnet cidr public"
-        default = "10.0.1.0/24"
+    description = "value of subnet cidr public"
+    default = "10.0.1.0/24"
 }
 
 variable "subnet_cidr_private" {
 	type = string
-        description = "value of subnet cidr private"
-        default = "10.0.2.0/24"
+    description = "value of subnet cidr private"
+    default = "10.0.2.0/24"
 }
 
 
@@ -31,7 +31,24 @@ variable "ec2_ami" {
 
 variable "ec2_instance_type" {
 	type = string
-        description = "ec2 instance value"
-        default = "t2.micro"
+    description = "ec2 instance value"
+    default = "t2.micro"
 }
 
+variable "s3_bucket" {
+    type = string
+    description = "name of s3 bucket"
+    default = "Terraform Backup"
+}
+
+variable "s3_key_name" {
+    type = string
+    description = "name of key pair in s3"
+    default = "backup"
+}
+
+variable "s3_source" {
+    type = string
+    description = "path of terraform.tfstate.backup file"
+    default = "../../terraform.tfstate.backup"
+}

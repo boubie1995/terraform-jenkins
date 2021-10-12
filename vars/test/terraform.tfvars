@@ -9,3 +9,9 @@ subnet_cidr_private = "192.168.2.0/24"
 
 ec2_ami = "ami-02e136e904f3da870"
 ec2_instance_type = "t2.micro"
+
+# S3 VARS 
+
+s3_bucket = "Terraform Backup"
+s3_key_name = "backup"
+s3_source = "../../terraform.tfstate.backup"

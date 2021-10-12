@@ -7,17 +7,17 @@
 module "my_vpc" {
 	
 	source = "./module/vpc"
-	vpc_cidr = "10.0.0.0/16"
-	tenancy = "default"
-	subnet_cidr_publci = "10.0.1.0/24"
-	sudnet_cidr_private = "10.0.2.0/24"
+	vpc_cidr = var.vpc_cidr
+	vpc_tenancy = var.tenancy
+	subnet_cidr_public = var.subnet_cidr_public
+	subnet_cidr_private = var.subnet_cidr_private
 }
 
 module "my_ec2" {
 
 	source = "./module/ec2"
-	ec2_ami = "ami-02e136e904f3da870"
-	ec2_instance_type = "t2.micro"
-	subnet_id_public = module.my_vpc.subnet_id_public
+	ec2_ami = var.ec2_ami
+	ec2_instance_type = var.ec2_instance_type
+	subnet_id_public = var.subnet_id_public
 }
 

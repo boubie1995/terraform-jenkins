@@ -1,4 +1,3 @@
-# latest version of your script
 pipeline{
   agent any
   environment {
@@ -8,6 +7,11 @@ pipeline{
     stage('terraform init'){
       steps{
         sh "terraform init"
+      }
+    }
+    stage('terraform apply'){
+      steps{
+        sh returnStatus: true, script: 'terraform apply -auto-approve'
       }
     }
   }

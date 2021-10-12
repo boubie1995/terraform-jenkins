@@ -4,7 +4,7 @@ resource "aws_instance" "web" {
   subnet_id     = var.subnet_id_public
 
   tags = {
-    Name = "jobooo"
+    Name = "jenkinsTerraform-EC2"
   }
 }
 

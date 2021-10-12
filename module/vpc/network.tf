@@ -3,7 +3,7 @@ resource "aws_vpc" "helia" {
   instance_tenancy = var.vpc_tenancy
 
   tags = {
-    Name = "main"
+    Name = "jenkinsTerraform-VPC"
   }
 }
 
